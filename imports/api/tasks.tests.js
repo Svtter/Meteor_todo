@@ -29,7 +29,7 @@ if (Meteor.isServer) {
                 const invocation = { userId };
 
                 // Run the method with 'this' set to the invocation
-                deleteTask.apply(invocation, [takskId])
+                deleteTask.apply(invocation, [taskId])
 
                 // Verify that the method does what we expected
                 assert.equal(Tasks.find().count(), 0)
